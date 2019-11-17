@@ -1,7 +1,7 @@
 import time
 import random
 
-def headcount(question, correct):
+def mentalcalc(question, correct):
     start = time.time()
     answer = input(question)
     end = time.time()
@@ -20,7 +20,7 @@ random.shuffle(questions)
 
 total_solve_time = 0
 for question in questions:
-    solve_time = headcount(question[0], question[1])
+    solve_time = mentalcalc(question[0], question[1])
     if solve_time == 0:
         print("Wrong. Start over.")
         # Brings it back to 0 so I can make this the condition for faliure in the last if
