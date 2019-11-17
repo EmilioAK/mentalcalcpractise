@@ -2,6 +2,10 @@ import time
 import random
 import math_problems
 
+# Changes the order of the questions. Helps with learning
+random.shuffle(math_problems.questions)
+
+
 def mentalcalc(question, correct):
     start = time.time()
     answer = eval(input(question))
@@ -13,10 +17,6 @@ def mentalcalc(question, correct):
         return answer_time
     else:
         return 0
-
-random.shuffle(math_problems.questions)
-
-#-------------
 
 total_solve_time = 0
 for question in math_problems.questions:
