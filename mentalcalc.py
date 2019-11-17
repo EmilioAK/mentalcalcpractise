@@ -7,7 +7,10 @@ random.shuffle(math_problems.questions)
 
 def mentalcalc(question, correct):
     start = time.time()
-    answer = int(input(question))
+    try:
+        answer = int(input(question))
+    except ValueError:
+        answer = None
     end = time.time()
 
     answer_time = end-start
