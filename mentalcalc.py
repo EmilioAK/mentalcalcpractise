@@ -5,26 +5,26 @@ import math_problems
 # Changes the order of the questions. Helps with learning
 random.shuffle(math_problems.questions)
 
-def mentalcalc(question, correct):
-    start = time.time()
+def time_user(question, correct_answer):
+    start_time = time.time()
     
     try:
-        answer = int(input(question))
+        user_answer = int(input(question))
     except ValueError:
-        answer = None
+        user_answer = None
     
-    end = time.time()
+    end_time = time.time()
 
-    answer_time = end-start
+    answer_time = end_time - start_time
 
-    if answer == correct:
+    if user_answer == correct_answer:
         return answer_time
     else:
         return 0
 
 total_solve_time = 0
 for question in math_problems.questions:
-    solve_time = mentalcalc(question[0], question[1])
+    solve_time = time_user(question[0], question[1])
     if solve_time == 0:
         print("Wrong. Start over.")
         # Brings it back to 0 so I can make this the condition for faliure in the last if
