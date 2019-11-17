@@ -1,5 +1,6 @@
 import time
 import random
+import math_problems
 
 def mentalcalc(question, correct):
     start = time.time()
@@ -13,13 +14,12 @@ def mentalcalc(question, correct):
     else:
         return 0
 
-questions = [["5+2= ", 7], ["6+2= ", 8], ["4+2= ", 6], ["7+2= ", 9], ["8+7= ", 15], ["5+7= ", 12], ["5+8= ", 13], ["6+7= ", 13], ["8+6= ", 14]]
-random.shuffle(questions)
+random.shuffle(math_problems.questions)
 
 #-------------
 
 total_solve_time = 0
-for question in questions:
+for question in math_problems.questions:
     solve_time = mentalcalc(question[0], question[1])
     if solve_time == 0:
         print("Wrong. Start over.")
