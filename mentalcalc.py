@@ -3,7 +3,7 @@ import random
 
 def mentalcalc(question, correct):
     start = time.time()
-    answer = input(question)
+    answer = eval(input(question))
     end = time.time()
 
     answer_time = end-start
