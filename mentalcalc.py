@@ -7,7 +7,7 @@ def time_user(question, correct_answer):
     start_time = time.time()
     
     try:
-        user_answer = int(input(question))
+        user_answer = int(input(question + "= "))
     except ValueError:
         user_answer = None
     
