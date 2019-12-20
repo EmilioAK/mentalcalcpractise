@@ -2,7 +2,6 @@ import time
 import random
 import math_problems
 
-
 def time_user(question, correct_answer):
     start_time = time.time()
     
@@ -20,8 +19,7 @@ def time_user(question, correct_answer):
     else:
         return 0
 
-
-if __name__ == '__main__':
+def main():
     # Changes the order of the questions. Helps with learning
     random.shuffle(math_problems.questions)
 
@@ -39,3 +37,6 @@ if __name__ == '__main__':
     
     if total_solve_time:
         print("\nTotal time: " + str(total_solve_time))
+
+if __name__ == "__main__":
+    main()
