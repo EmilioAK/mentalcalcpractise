@@ -35,7 +35,7 @@ if __name__ == '__main__':
             break
         else:
             total_solve_time += solve_time
-            print(str(total_solve_time) + " seconds of solve time")
+            print(str(solve_time) + " seconds of solve time")
     
     if total_solve_time:
         print("\nTotal time: " + str(total_solve_time))
